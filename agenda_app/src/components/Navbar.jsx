@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styled from "styled-components"
+import { authContext } from '../context/AuthContext'
 
 const Nav = styled.nav`
     background-color: aqua;
@@ -10,7 +11,11 @@ const Li = styled.li`
     background-color: cadetblue;
 `
 
-export default function Navbar({user}) {
+export default function Navbar() {
+
+    const {user} = useContext(authContext)
+    
+
   return (
     <div>
         <Nav>

@@ -1,22 +1,22 @@
-import { useRef } from "react"
+import { useContext, useRef } from "react"
 import SubmitButton from "../components/buttons/SubmitButton"
 import Container from "../components/containers/Container"
 import Form from "../components/forms/Form"
 import Input from "../components/forms/Input"
 import Title from "../components/headers/Title"
+import { authContext } from "../context/AuthContext"
 
 
 // Desestructuración
 // Destructuring
-export default function Login({setUser}) {
+export default function Login() {
 
     const email = useRef()
     const password = useRef()
+    const {setUser} = useContext(authContext)
 
     const login = (event)=>{
         event.preventDefault()
-        console.log(email.current.value)
-        console.log(password.current.value)
 
         // Backend: hariamos una request
         setUser({
