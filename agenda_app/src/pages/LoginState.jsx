@@ -60,9 +60,26 @@ export default function LoginState() {
         <Container>
             <Title>Login</Title>
             <Form onSubmit={login}>
-                <Input onInput={handleInputChange} value={data.email} placeholder="Email" type="email" name="email" />
-                <Input onChange={handleInputChange} value={data.password} placeholder="Password" type="password" name="password" />
-                <Input onChange={handleInputCheckedChange} checked={data.rememberMe} type="checkbox" name="rememberMe" />
+                <Input 
+                    onInput={handleInputChange} 
+                    value={data.email} 
+                    placeholder="Email" 
+                    type="email" 
+                    name="email" 
+                />
+                <Input 
+                    onChange={handleInputChange} 
+                    value={data.password} 
+                    placeholder="Password" 
+                    type="password" 
+                    name="password" 
+                />
+                <Input 
+                    onChange={handleInputCheckedChange} 
+                    checked={data.rememberMe} 
+                    type="checkbox" 
+                    name="rememberMe" 
+                />
 
                 <SubmitButton>Login</SubmitButton>
             </Form>

@@ -19,9 +19,18 @@ export default function Login() {
         event.preventDefault()
 
         // Backend: hariamos una request
+        // setUser({
+        //     logged:true,
+        //     data:{
+        //         email: email.current.value,
+        //         password: password.current.value
+        //     }
+        // })
+
+        // Usando el reducer
         setUser({
-            logged:true,
-            data:{
+            type:"LOGIN",
+            payload:{
                 email: email.current.value,
                 password: password.current.value
             }

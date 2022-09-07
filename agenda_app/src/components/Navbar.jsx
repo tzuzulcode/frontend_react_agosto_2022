@@ -22,6 +22,7 @@ export default function Navbar() {
             <ul>
                 <Li><Link to="/login">Login</Link></Li>
                 <Li><Link to="/login_state">Login State</Link></Li>
+                <Li><Link to="/login_custom_hook">Login Custom Hook</Link></Li>
                 <Li>Link</Li>
                 <Li>Link</Li>
                 <Li>Link</Li>
