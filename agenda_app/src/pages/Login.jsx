@@ -1,4 +1,5 @@
 import { useContext, useRef } from "react"
+import { useNavigate } from "react-router-dom"
 import SubmitButton from "../components/buttons/SubmitButton"
 import Container from "../components/containers/Container"
 import Form from "../components/forms/Form"
@@ -14,6 +15,7 @@ export default function Login() {
     const email = useRef()
     const password = useRef()
     const {setUser} = useContext(authContext)
+    const navigate = useNavigate() //Hook de react-router-dom. Devuelve una función para navegar
 
     const login = (event)=>{
         event.preventDefault()
@@ -35,6 +37,9 @@ export default function Login() {
                 password: password.current.value
             }
         })
+
+        // window.location.href = "/"
+        navigate("/")
     }
     
     return (
